@@ -26,4 +26,13 @@ RSpec.describe 'Calendar', :request do
       end
     end
   end
+
+  describe 'GET/calendar/:params' do
+    it 'returns proper summary for September 10' do
+      get v1_calendar_path, params: {month: 9, date: 10}
+      calendar_day = JSON.parse(response.body)
+      summary = "Menodora, Metrodora, \u0026 Nymphodora the Martyrs"      
+      expect(calendar_day["summary"]).to eq(summary)
+    end
+  end
 end
