@@ -1,24 +1,10 @@
-# README
+# Orthodox Calendar API
+This is a RESTful API for accessing Orthodox Calendar information for a given calendar date. It's based off of [OCRA](https://github.com/harmolipi/OCRA), but recreated in Rails.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Testing
+Run all tests with:
+```console
+$ rspec
+```
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+God bless.
