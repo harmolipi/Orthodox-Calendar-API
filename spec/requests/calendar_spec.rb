@@ -1,9 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Calendar', :request do 
-  it 'successfully passes' do
-    expect(1 + 1).to eq(2)
-  end
 
   describe 'GET /calendars' do
     context '200' do
