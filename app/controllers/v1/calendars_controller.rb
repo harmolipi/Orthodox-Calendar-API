@@ -7,7 +7,7 @@ class V1::CalendarsController < ApplicationController
     render json: @json_dates, status: :ok
   end
 
-  # GET /calendar/params
+  # GET /calendar?month=09&date=01
   def show
     selected_date = @parsed_dates.find { |date| date["month"].to_i == calendar_params[:month].to_i && date["date"].to_i == calendar_params[:date].to_i }
     render json: selected_date
@@ -16,7 +16,7 @@ class V1::CalendarsController < ApplicationController
   private
 
   def calendar_params
-    params.permit(:month, :date)
+    params.permit(:month, :date, :format)
   end
 
   def get_dates
