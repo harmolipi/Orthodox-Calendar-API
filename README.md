@@ -1,5 +1,5 @@
 # Orthodox Calendar API
-This is a RESTful API for accessing Orthodox Calendar information for a given calendar date in JSON format. It's based off of [OCRA](https://github.com/harmolipi/OCRA), but recreated in Rails. The festal calendar dates all exist in [`public/calendar_database.json`](https://github.com/harmolipi/Orthodox-Calendar-API/blob/main/public/calendar_database.json), which is taken from OCRA.
+This is a RESTful API for accessing Orthodox Calendar information for a given calendar date in JSON format. It's based off of [OCRA](https://github.com/anaxios/OCRA), but recreated in Rails. The festal calendar dates all exist in [`public/calendar_database.json`](https://github.com/harmolipi/Orthodox-Calendar-API/blob/main/public/calendar_database.json), which is taken from OCRA.
 
 ## REST API
 ### Request all calendar dates
