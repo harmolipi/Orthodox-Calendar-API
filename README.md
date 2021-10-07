@@ -7,7 +7,7 @@ This is a RESTful API for accessing Orthodox Calendar information for a given ca
 #### Request
 `GET /calendars`
 ```console
-curl -i "http://localhost:3000/calendars"
+$ curl -i "http://localhost:3000/calendars"
 ```
 
 #### Response
@@ -31,9 +31,9 @@ Transfer-Encoding: chunked
 
 ### Request info for particular date
 #### Request
-`GET /calendar?month=09&date=01`
+`GET /calendar?month=12&date=06`
 ```console
-curl -i "http://localhost:3000/calendar?month=12%date=06"
+$ curl -i "http://localhost:3000/calendar?month=12%date=06"
 ```
 
 #### Response
@@ -58,8 +58,8 @@ Transfer-Encoding: chunked
 ### Available attributes for each date:
 | Attribute | Description |
 |--- | --- |
-| `month` | Month in 2-digit format (e.g. '09') |
-| `date` | Date in 2-digit format (e.g. '01') |
+| `month` | Month in 1- or 2-digit format (e.g. '9' or '09') |
+| `date` | Date in 1- or 2-digit format (e.g. '1' or '01') |
 | `summary` | Description of day's feast |
 | `fastRank` | Fasting for the day |
 | `saintsAndFeast` | List of all saints and feasts celebrated |
@@ -72,12 +72,12 @@ API defaults to the latest version. Manually specify by setting the `Accept-vers
 ### Examples
 #### cURL:
 ```console
-curl -H "Accept-version: v1" "http://localhost:3000/calendars"
+$ curl -H "Accept-version: v1" "http://localhost:3000/calendars"
 ```
 
 #### [Rest-Client](https://github.com/rest-client/rest-client):
 ```ruby
-RestClient.get('http://localhost:3000/calendars', {'Accept-version' => 'v1'})
+> RestClient.get('http://localhost:3000/calendars', {'Accept-version' => 'v1'})
 ```
 
 ## Testing
